@@ -1,0 +1,16 @@
+@media (max-width: 600px) {
+  h1 {
+    display: none;
+  }
+
+  header {
+    .nav-bar {
+        ul {
+          margin:0;
+          display: unset;
+          position: relative;
+          right: 3.75rem;
+        }
+  }
+  }
+}
