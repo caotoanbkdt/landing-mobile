@@ -57,7 +57,9 @@ ul {
   padding: 3rem;
   position: relative;
   top: -45px;
-  animation: fade-in 0.9s ease-out forwards;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-duration: 0.9s;
   visibility: hidden;
 }
 
@@ -245,7 +247,9 @@ header .nav-bar ul a:hover {
   background-repeat: no-repeat;
   background-color: #674CAF;
   visibility: hidden;
-  animation: fade-in-b 1s forwards;
+  animation-timing-function: ease-out;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
 
 .block6 {
@@ -281,6 +285,39 @@ header .nav-bar ul a:hover {
   font-weight: 2.5rem;
   color: #676767;
   margin-bottom: 20vh;
+}
+
+.block-imgs {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin: 15vh auto;
+}
+
+.block-imgs img {
+  position: relative;
+  width: 30%;
+  visibility: hidden;
+  animation-timing-function: ease;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.block-imgs img:nth-child(1) {
+  margin-top: 12rem;
+  animation-delay: 200ms;
+  animation-duration: 800ms;
+}
+
+.block-imgs img:nth-child(2) {
+  margin-top: 8rem;
+  animation-delay: 100ms;
+  animation-duration: 900ms;
+}
+
+.block-imgs img:nth-child(3) {
+  margin-top: 4rem;
 }
 
 @keyframes effectButtonMoveIn {
@@ -390,6 +427,12 @@ footer .bottom a {
     visibility: unset;
     opacity: 1;
     background-position: center 25vh;
+  }
+}
+
+@media (max-width: 400px) {
+  .btn.btn__contact {
+    margin-top: 1rem;
   }
 }
 
